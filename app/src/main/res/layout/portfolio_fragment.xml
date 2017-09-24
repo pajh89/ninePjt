@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/boxChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change BOX"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/boxID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="장바구니 이름"
+            android:textSize="18dp"
+            android:textColor="#0000c6"
+            android:padding="5dp"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/shareBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHARE"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recy_port"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

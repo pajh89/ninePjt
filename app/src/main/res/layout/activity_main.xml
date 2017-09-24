@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomMenu">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            android:background="#e6e6e6">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#ffffffff"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+
+            <ImageView
+                android:id="@+id/feed_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                app:srcCompat="@drawable/profile" />
+
+            <ImageView
+                android:id="@+id/searchbtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingBottom="9dp"
+                android:paddingTop="9dp"
+                app:srcCompat="@drawable/profile" />
+
+            <ImageView
+                android:id="@+id/cameraBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingBottom="9dp"
+                android:paddingTop="9dp"
+                app:srcCompat="@drawable/profile" />
+
+            <ImageView
+                android:id="@+id/portfoliobtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingBottom="9dp"
+                android:paddingTop="9dp"
+                app:srcCompat="@drawable/profile" />
+
+            <ImageView
+                android:id="@+id/mybtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingBottom="9dp"
+                android:paddingTop="9dp"
+                app:srcCompat="@drawable/letter" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
