@@ -14,7 +14,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:padding="10dp"
+            android:padding="8dp"
             android:text="PUT ANOTHER"
             android:layout_toLeftOf="@+id/put_box"/>
 
@@ -39,7 +40,7 @@
             android:layout_height="wrap_content"
             android:text="PUT"
             android:textSize="16sp"
-            android:padding="10dp"
+            android:padding="8dp"
             android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
@@ -105,7 +106,8 @@
             android:id="@+id/de_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="상세설명"
+            android:text="상세설명 보기"
+            android:textColor="#4000ff"
             android:textSize="10sp"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"

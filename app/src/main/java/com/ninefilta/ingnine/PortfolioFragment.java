@@ -3,11 +3,14 @@ package com.ninefilta.ingnine;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -35,6 +38,19 @@ public class PortfolioFragment extends Fragment{
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter.setLinearLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
+
+        final TextView boxChange = (TextView) rootView.findViewById(R.id.boxChange);
+        boxChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ChangeBoxFragment boxChangeFragment = new ChangeBoxFragment();
+                FragmentManager fmanager = getFragmentManager();
+                FragmentTransaction ftrans = fmanager.beginTransaction();
+                ftrans.replace(R.id.container, boxChangeFragment);
+                ftrans.addToBackStack(null);
+                ftrans.commit();
+            }
+        });
 
         return rootView;
     }
