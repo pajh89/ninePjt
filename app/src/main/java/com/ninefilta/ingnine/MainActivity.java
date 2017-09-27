@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity{
     FeedFragment feedFragment;
     PortfolioFragment portfolioFragment;
     MyFragment myFragment;
+    SearchFragment searchFragment;
+
 
 
     @Override
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity{
         feedFragment = new FeedFragment();
         portfolioFragment = new PortfolioFragment();
         myFragment = new MyFragment();
-
+        searchFragment = new SearchFragment();
 
 
         if (findViewById(R.id.container) != null) {
@@ -55,8 +57,8 @@ public class MainActivity extends AppCompatActivity{
             // Intent, pass the Intent's extras to the fragment as arguments
             feedFragment.setArguments(getIntent().getExtras());
 
-            // Add the fragment to the 'fragment_container' FrameLayout
-            getSupportFragmentManager().beginTransaction().add(R.id.container, feedFragment).commit();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.add(R.id.container, feedFragment).commit();
         }
 
 
@@ -68,18 +70,26 @@ public class MainActivity extends AppCompatActivity{
              //   feedBundle.putInt(FeedFragment.ARG_POSITION, position);
                 feedFragment.setArguments(feedBundle);
 
-                FragmentTransaction feedTransaction = getSupportFragmentManager().beginTransaction();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, feedFragment);
+                transaction.addToBackStack(null);
 
-                feedTransaction.replace(R.id.container, feedFragment);
-                feedTransaction.addToBackStack(null);
-
-                feedTransaction.commit();
+                transaction.commit();
             }
         });
 
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Bundle searchBundle = new Bundle();
+                //   feedBundle.putInt(FeedFragment.ARG_POSITION, position);
+                searchFragment.setArguments(searchBundle);
+
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, searchFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+
             }
         });
 
@@ -91,12 +101,10 @@ public class MainActivity extends AppCompatActivity{
                 //   feedBundle.putInt(FeedFragment.ARG_POSITION, position);
                 portfolioFragment.setArguments(portBundle);
 
-                FragmentTransaction feedTransaction = getSupportFragmentManager().beginTransaction();
-
-                feedTransaction.replace(R.id.container, portfolioFragment);
-                feedTransaction.addToBackStack(null);
-
-                feedTransaction.commit();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, portfolioFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
 
@@ -108,12 +116,10 @@ public class MainActivity extends AppCompatActivity{
                 //   feedBundle.putInt(FeedFragment.ARG_POSITION, position);
                 myFragment.setArguments(myBundle);
 
-                FragmentTransaction feedTransaction = getSupportFragmentManager().beginTransaction();
-
-                feedTransaction.replace(R.id.container, myFragment);
-                feedTransaction.addToBackStack(null);
-
-                feedTransaction.commit();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, myFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
 
