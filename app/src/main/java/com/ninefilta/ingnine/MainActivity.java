@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity{
     ImageView portfolioBtn;
     ImageView myBtn;
 
+    FragmentTransaction transaction;
     FeedFragment feedFragment;
     PortfolioFragment portfolioFragment;
     MyFragment myFragment;
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity{
             // Intent, pass the Intent's extras to the fragment as arguments
             feedFragment.setArguments(getIntent().getExtras());
 
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction = getSupportFragmentManager().beginTransaction();
             transaction.add(R.id.container, feedFragment).commit();
         }
 
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity{
              //   feedBundle.putInt(FeedFragment.ARG_POSITION, position);
                 feedFragment.setArguments(feedBundle);
 
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.container, feedFragment);
                 transaction.addToBackStack(null);
 
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity{
                 //   feedBundle.putInt(FeedFragment.ARG_POSITION, position);
                 searchFragment.setArguments(searchBundle);
 
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.container, searchFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity{
                 //   feedBundle.putInt(FeedFragment.ARG_POSITION, position);
                 portfolioFragment.setArguments(portBundle);
 
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.container, portfolioFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity{
                 //   feedBundle.putInt(FeedFragment.ARG_POSITION, position);
                 myFragment.setArguments(myBundle);
 
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction = getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.container, myFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
