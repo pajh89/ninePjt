@@ -13,8 +13,8 @@
 
         <ImageView
             android:id="@+id/profilePic"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:padding="5dp"
@@ -43,13 +43,10 @@
         </LinearLayout>
 
 
-
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#e6e6e6">
-
-    </LinearLayout>
+        android:background="#dddddd"/>
 
     <TextView
         android:id="@+id/myRoom"
@@ -98,12 +95,10 @@
         android:layout_marginLeft="10dp"
         android:textSize="17sp" />
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#e6e6e6">
-
-    </LinearLayout>
+        android:background="#dddddd"/>
 
 
     <TextView

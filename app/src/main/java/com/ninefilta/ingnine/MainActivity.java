@@ -2,12 +2,10 @@ package com.ninefilta.ingnine;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -30,11 +28,12 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setCustomActionBar();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         feedBtn = (ImageView) findViewById(R.id.feed_btn);
         searchBtn = (ImageView) findViewById(R.id.searchbtn);
-        cameraBtn = (ImageView) findViewById(R.id.cameraBtn);
         portfolioBtn = (ImageView) findViewById(R.id.portfoliobtn);
         myBtn = (ImageView) findViewById(R.id.mybtn);
 
@@ -158,7 +157,7 @@ public class MainActivity extends AppCompatActivity{
             transaction.commit();
         }
     }
-*/
+
     public void setCustomActionBar(){
 
         ActionBar actionBar = getSupportActionBar();
@@ -184,5 +183,5 @@ public class MainActivity extends AppCompatActivity{
 
         getSupportActionBar().setElevation(0);
     }
-
+*/
 }

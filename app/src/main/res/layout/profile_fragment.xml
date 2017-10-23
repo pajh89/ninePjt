@@ -11,11 +11,10 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/backspace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_prev"
             android:layout_marginLeft="3dp"
-            android:padding="12dp"
             android:layout_alignParentLeft="true"/>
 
         <TextView
@@ -38,11 +37,10 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#dadada"
-        android:orientation="vertical" />
+        android:background="#dddddd"/>
     
     <RelativeLayout
         android:layout_width="match_parent"
@@ -105,10 +103,9 @@
     </RelativeLayout>
 
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#dadada"
-        android:orientation="vertical" />
+        android:background="#dddddd"/>
 
 </LinearLayout>
