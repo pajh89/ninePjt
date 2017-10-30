@@ -53,7 +53,6 @@ public class PortfolioAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHold
         if (holder instanceof PortfolioViowHolder) {
             PortfolioItem items = (PortfolioItem) portfolioItems.get(position);
             ((PortfolioViowHolder) holder).mboxNum_Port.setText(items.getBoxNum_Port());
-            ((PortfolioViowHolder) holder).mcategory_Port.setText(items.getCategory_Port());
             ((PortfolioViowHolder) holder).mtitle_Port.setText(items.getTitle_Port());
         }}
 
@@ -65,13 +64,11 @@ public class PortfolioAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     static class PortfolioViowHolder extends RecyclerView.ViewHolder {
         private TextView mboxNum_Port;
-        private TextView mcategory_Port;
         private TextView mtitle_Port;
 
         public PortfolioViowHolder(View v) {
             super(v);
             mboxNum_Port = (TextView) v.findViewById(R.id.boxNum_port);
-            mcategory_Port = (TextView) v.findViewById(R.id.category_Port);
             mtitle_Port = (TextView) v.findViewById(R.id.title_Port);
         }
 

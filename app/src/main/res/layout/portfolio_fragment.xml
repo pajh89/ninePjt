@@ -8,15 +8,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="10dp">
+        android:layout_margin="5dp">
 
-        <TextView
+        <ImageView
             android:id="@+id/boxChange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Change BOX"
-            android:textSize="15dp"
-            android:padding="10dp"
+            android:src="@drawable/btn_ptf_anoth"
+            android:layout_marginLeft="5dp"
             android:layout_alignParentLeft="true"/>
 
         <TextView
@@ -24,18 +23,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="장바구니 이름"
-            android:textSize="18dp"
+            android:textSize="15dp"
             android:textColor="#0000c6"
             android:padding="5dp"
             android:layout_centerInParent="true"/>
 
-        <TextView
+        <ImageView
             android:id="@+id/shareBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SHARE"
-            android:textSize="15dp"
-            android:padding="10dp"
+            android:src="@drawable/btn_ptf_share"
+            android:layout_marginRight="5dp"
             android:layout_alignParentRight="true"/>
 
     </RelativeLayout>

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:layout_margin="10dp">
-
+    android:layout_height="105dp">
 
 
         <LinearLayout
@@ -17,15 +11,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_alignParentLeft="true">
+            android:layout_centerVertical="true">
 
             <ImageView
                 android:id="@+id/img_port"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:layout_gravity="center_vertical"
+                android:layout_gravity="center"
                 android:padding="5dp"
-                android:src="@drawable/letter" />
+                android:src="@drawable/img_samplejpeg2" />
 
             <TextView
                 android:id="@+id/boxNum_port"
@@ -39,98 +33,76 @@
 
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="83dp"
-            android:orientation="vertical"
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="85dp"
             android:layout_toRightOf="@+id/fstLinear"
-            android:layout_marginLeft="8dp">
+            android:layout_marginLeft="3dp"
+            android:layout_centerVertical="true">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/ptf_f"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="2">
+                android:orientation="horizontal">
 
-                <TextView
+                <ImageView
                     android:id="@+id/category_Port"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:text="필터 종류"
-                    android:textSize="11sp" />
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/logo_daily"
+                    android:layout_marginLeft="3dp" />
 
                 <TextView
                     android:id="@+id/title_Port"
-                    android:layout_width="wrap_content"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:ellipsize="end"
                     android:maxLines="1"
                     android:padding="5dp"
                     android:text="필터 이름"
-                    android:textSize="13sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ptf_s"
+                android:layout_below="@+id/ptf_f"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="2">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:textSize="13sp"
-                    android:text="태그"/>
+                    android:padding="7dp"
+                    android:textSize="12sp"
+                    android:text="#태그"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:textSize="13sp"
-                    android:text="태그"/>
+                    android:padding="7dp"
+                    android:textSize="12sp"
+                    android:text="#태그"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:textSize="13sp"
-                    android:text="태그"/>
+                    android:padding="7dp"
+                    android:textSize="12sp"
+                    android:text="#태그"/>
 
             </LinearLayout>
 
             <TextView
                 android:id="@+id/Id_Port"
-                android:layout_width="wrap_content"
+                android:layout_below="@+id/ptf_s"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="3dp"
-                android:text="제작자 아이디"
+                android:text="by 제작자 아이디"
                 android:textSize="12sp" />
-
-
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true">
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="match_parent"
-                android:padding="8dp"
-                android:src="@drawable/menu_port"/>
-
         </RelativeLayout>
 
-
-
-
-    </RelativeLayout>
-
-
-</LinearLayout>
+</RelativeLayout>

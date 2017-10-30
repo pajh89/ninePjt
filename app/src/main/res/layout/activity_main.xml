@@ -10,7 +10,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="48dp"
         android:background="#ffffff"
         app:contentInsetStart="0dp"
         >
@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/btn_makeft"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:layout_marginLeft="12dp"/>
 
         <ImageView
@@ -28,17 +28,14 @@
             android:layout_height="wrap_content"
             android:src="@drawable/btn_logo"
             android:layout_gravity="center"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            tools:ignore="HardcodedText"
-            />
+            tools:ignore="HardcodedText" />
 
         <ImageView
             android:id="@+id/bar_cmr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/btn_camera"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:layout_marginRight="12dp"/>
 
     </android.support.v7.widget.Toolbar>
@@ -70,7 +67,7 @@
         <LinearLayout
             android:id="@+id/bottomMenu"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             android:orientation="horizontal"
             android:background="#ffffffff"
             android:layout_marginLeft="6dp"
@@ -84,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/btn_home_n"/>
+                android:src="@drawable/btn_home_p"/>
 
             <ImageView
                 android:id="@+id/searchbtn"
@@ -95,13 +92,20 @@
                 android:src="@drawable/btn_search_n"/>
 
             <ImageView
+                android:id="@+id/wigetbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ins_logo_wiget"/>
+
+            <ImageView
                 android:id="@+id/portfoliobtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
                 app:srcCompat="@drawable/btn_ptf_n" />
-
 
             <ImageView
                 android:id="@+id/mybtn"
@@ -110,6 +114,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/btn_my_n"/>
+
         </LinearLayout>
 
 

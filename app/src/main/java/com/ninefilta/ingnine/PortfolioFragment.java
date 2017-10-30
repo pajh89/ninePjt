@@ -10,7 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -39,7 +39,7 @@ public class PortfolioFragment extends Fragment{
         mAdapter.setLinearLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
-        final TextView boxChange = (TextView) rootView.findViewById(R.id.boxChange);
+        final ImageView boxChange = (ImageView) rootView.findViewById(R.id.boxChange);
         boxChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +64,7 @@ public class PortfolioFragment extends Fragment{
     private void loadData() {
         mPortfolioItem.clear();
         for (int i = 1; i <= 10; i++) {
-            mPortfolioItem.add(new PortfolioItem(""+i, "셀피", "가나다라마바사가기가구가기러랴미아러안됍니다안돼"));
+            mPortfolioItem.add(new PortfolioItem(""+i, "가나다라마바사가기가구가기러랴미아러안됍니다안돼"));
         }
         mAdapter.addAll(mPortfolioItem);
     }

@@ -14,7 +14,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="54dp"
+        android:layout_height="45dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp">
 
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/btn_cameraprv"
             android:layout_toLeftOf="@+id/put_box"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="3dp"
             android:layout_centerVertical="true"/>
 
         <ImageView
@@ -54,17 +54,15 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="240dp"
             android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:src="@drawable/letter"/>
+            android:src="@drawable/img_samplejpeg"/>
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="240dp"
             android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:src="@drawable/letter"/>
+            android:src="@drawable/img_samplejpeg2"/>
 
     </LinearLayout>
 
@@ -83,13 +81,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/logo_selfie"/>
+            android:src="@drawable/logo_daily"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="언제나 밝은얼굴"
-            android:textSize="18sp"
+            android:text="햇빛아래 찻잔"
+            android:textSize="15sp"
             android:maxLines="1"
             android:ellipsize="end"
             android:layout_toLeftOf="@+id/de_more"
@@ -102,7 +100,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
             android:src="@drawable/btn_detail"/>
 
 
@@ -115,28 +114,26 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
 
         <ImageView
             android:id="@+id/de_ProPic"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_selfie"
             android:layout_centerVertical="true"/>
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/de_ProPic"
-            android:layout_marginLeft="5dp"
             android:maxLines="2"
             android:padding="6dp"
             android:text="커뮤니티 아이디"
-            android:textSize="15sp" />
+            android:layout_centerVertical="true"
+            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/de_subscribe"
@@ -146,8 +143,8 @@
             android:layout_toLeftOf="@+id/de_famousAll"
             android:layout_toStartOf="@+id/de_famousAll"
             android:padding="8dp"
-            android:text="구독하는 중"
-            android:textSize="13sp"/>
+            android:text="구독 중"
+            android:textSize="12sp"/>
 
         <LinearLayout
             android:id="@+id/de_famousAll"
@@ -163,14 +160,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="인기도 "
-                android:textSize="13sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/de_famous"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="300"
-                android:textSize="13sp" />
+                android:text="150k"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -184,20 +181,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="#TAG"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:padding="7dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="#TAG"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:padding="7dp"/>
 
     </LinearLayout>
@@ -210,8 +209,8 @@
     <ImageView
         android:id="@+id/advertise"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:src="@drawable/nine_whiteex"/>
+        android:layout_height="110dp"
+        android:src="@drawable/view_ad"/>
 
         <View
             android:layout_width="match_parent"
@@ -226,7 +225,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="댓글달기"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:padding="8dp"
             android:layout_marginLeft="10dp"
             android:layout_alignParentLeft="true"

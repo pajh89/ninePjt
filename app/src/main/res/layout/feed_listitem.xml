@@ -7,29 +7,39 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:orientation="horizontal"
-        android:padding="5dp">
+        android:layout_margin="8dp">
 
+
+        <ImageView
+            android:id="@+id/profilePic"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profile"/>
 
         <TextView
-            android:id="@+id/ftitle"
+            android:id="@+id/profileId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:padding="8dp"
-            android:text="가나다라마바사"
-            android:textSize="20sp" />
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/profilePic"
+            android:layout_toRightOf="@+id/profilePic"
+            android:padding="5dp"
+            android:text="플랫폼 아이디"
+            android:textSize="13sp" />
+
 
         <TextView
             android:id="@+id/ftime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
             android:text="23시간 전"
-            android:textSize="13sp"
-            android:padding="11dp"
-            android:layout_alignParentRight="true"/>
+            android:textSize="10sp"/>
+
     </RelativeLayout>
 
     <LinearLayout
@@ -37,125 +47,131 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="10dp">
 
         <ImageView
             android:id="@+id/nteImg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/car"
-            android:layout_weight="1"
-            android:layout_marginRight="1dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:src="@drawable/img_samplejpeg"
+            android:layout_weight="1"/>
 
         <ImageView
-            android:id="@+id/fImg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/car"
-            android:layout_weight="1"
-            android:layout_marginLeft="1dp"/>
+            android:id="@+id/aftImg"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:src="@drawable/img_samplejpeg2"
+            android:layout_weight="1"/>
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp">
 
-        <ImageView
-            android:id="@+id/profilePic"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="3dp"
-            android:src="@drawable/profile"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp">
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/profileId"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="플랫폼 아이디"
-                    android:textSize="15sp"
-                    android:padding="5dp"
-                    android:layout_alignParentLeft="true"/>
+                    android:src="@drawable/logo_daily"
+                    android:id="@+id/imageView2" />
+
+                <TextView
+                    android:id="@+id/ftitle"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/imageView2"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="햇빛아래 찻잔(제목)"
+                    android:textSize="15sp" />
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="인기도"
-                    android:padding="3sp"
-                    android:textSize="13sp"
                     android:layout_alignParentTop="true"
                     android:layout_toLeftOf="@+id/fLike"
                     android:layout_toStartOf="@+id/fLike"
-                    android:elevation="1dp"/>
+                    android:elevation="1dp"
+                    android:padding="3sp"
+                    android:text="인기도"
+                    android:textSize="11sp" />
 
                 <TextView
                     android:id="@+id/fLike"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="982"
-                    android:padding="3sp"
-                    android:textSize="13sp"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:padding="3sp"
+                    android:text="150k"
+                    android:textSize="11sp" />
 
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="1">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="#태그"
-                    android:textSize="15sp"
-                    android:padding="5dp"/>
+                    android:padding="5dp"
+                    android:text="#햇빛"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="#태그"
-                    android:textSize="15sp"/>
+                    android:padding="5dp"
+                    android:text="#찻잔"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="#태그"
-                    android:textSize="15sp"/>
+                    android:padding="5dp"
+                    android:text="#선명하게"
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="#작은차이"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
                     android:text="#태그"
-                    android:textSize="15sp"/>
+                    android:textSize="13sp" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
