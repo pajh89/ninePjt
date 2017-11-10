@@ -7,6 +7,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.ninefilta.ingnine.feedfragment.FeedFragment;
+import com.ninefilta.ingnine.myfragment.MyFragment;
+import com.ninefilta.ingnine.portfoliofragment.PortfolioFragment;
+import com.ninefilta.ingnine.searchfragment.SearchFragment;
+
 public class MainActivity extends AppCompatActivity{
 
     ImageView feedBtn;

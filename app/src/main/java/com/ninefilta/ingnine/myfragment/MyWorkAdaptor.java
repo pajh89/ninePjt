@@ -1,4 +1,4 @@
-package com.ninefilta.ingnine;
+package com.ninefilta.ingnine.myfragment;
 
 import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,18 +10,18 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.ninefilta.ingnine.R;
+
 import java.util.ArrayList;
 
 /**
- * Created by pajh8 on 2017-09-15.
+ * Created by pajh8 on 2017-09-29.
  */
 
+public class MyWorkAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
-
-public class FeedAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
-    private ArrayList<FeedItem> feedItems;
+    private ArrayList<MyWorkItem> myWorkItems;
     private OnLoadMoreListener onLoadMoreListener;
     private LinearLayoutManager mLinearLayoutManager;
 
@@ -37,9 +37,9 @@ public class FeedAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         void onLoadMore();
     }
 
-    public FeedAdaptor(OnLoadMoreListener onLoadMoreListener) {
+    public MyWorkAdaptor(OnLoadMoreListener onLoadMoreListener) {
         this.onLoadMoreListener = onLoadMoreListener;
-        feedItems = new ArrayList<>();
+        myWorkItems = new ArrayList<>();
     }
 
     public void setLinearLayoutManager(LinearLayoutManager linearLayoutManager){
@@ -73,20 +73,20 @@ public class FeedAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public int getItemViewType(int position) {
-        return feedItems.get(position) != null ? VIEW_ITEM : VIEW_PROG;
+        return myWorkItems.get(position) != null ? VIEW_ITEM : VIEW_PROG;
     }
 
     @Override
     public int getItemCount() {
-        return feedItems.size();
+        return myWorkItems.size();
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        if (holder instanceof FeedViewHolder) {
-            FeedItem items = (FeedItem) feedItems.get(position);
-            ((FeedViewHolder) holder).mftitle.setText(items.getFtitle());
-            ((FeedViewHolder) holder).mftime.setText(items.getFtime());
+        if (holder instanceof MyWorkViewHolder) {
+            MyWorkItem items = (MyWorkItem) myWorkItems.get(position);
+            ((MyWorkViewHolder) holder).mFCtg.setText(items.getMfCTG());
+            ((MyWorkViewHolder) holder).mFTitle.setText(items.getMfTitle());
         }
 
 
@@ -96,7 +96,7 @@ public class FeedAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         if (viewType == VIEW_ITEM) {
-            return new FeedViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.feed_listitem, parent, false));
+            return new MyWorkViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.my_mywork_listitem, parent, false));
         } else {
             return new ProgressViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_progress, parent, false));
         }
@@ -108,15 +108,15 @@ public class FeedAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         this.isMoreLoading=isMoreLoading;
     }
 
-    public void addAll(ArrayList<FeedItem> lst){
-        feedItems.clear();
-        feedItems.addAll(lst);
+    public void addAll(ArrayList<MyWorkItem> lst){
+        myWorkItems.clear();
+        myWorkItems.addAll(lst);
         notifyDataSetChanged();
     }
 
-    public void addItemMore(ArrayList<FeedItem> lst){
-        feedItems.addAll(lst);
-        notifyItemRangeChanged(0,feedItems.size());
+    public void addItemMore(ArrayList<MyWorkItem> lst){
+        myWorkItems.addAll(lst);
+        notifyItemRangeChanged(0,myWorkItems.size());
     }
 
 
@@ -127,25 +127,25 @@ public class FeedAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             new Handler().post(new Runnable() {
                 @Override
                 public void run() {
-                    feedItems.add(null);
-                    notifyItemInserted(feedItems.size() - 1);
+                    myWorkItems.add(null);
+                    notifyItemInserted(myWorkItems.size() - 1);
                 }
             });
         } else {
-            feedItems.remove(feedItems.size() - 1);
-            notifyItemRemoved(feedItems.size());
+            myWorkItems.remove(myWorkItems.size() - 1);
+            notifyItemRemoved(myWorkItems.size());
         }
     }
 
 
-    static class FeedViewHolder extends RecyclerView.ViewHolder {
-        private TextView mftitle;
-        private TextView mftime;
+    static class MyWorkViewHolder extends RecyclerView.ViewHolder {
+        private TextView mFCtg;
+        private TextView mFTitle;
 
-        public FeedViewHolder(View v) {
+        public MyWorkViewHolder(View v) {
             super(v);
-            mftitle = (TextView) itemView.findViewById(R.id.ftitle);
-            mftime = (TextView) itemView.findViewById(R.id.ftime);
+            mFCtg = (TextView) itemView.findViewById(R.id.fCtg);
+            mFTitle = (TextView) itemView.findViewById(R.id.fTitle);
         }
 
     }
@@ -158,5 +158,5 @@ public class FeedAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
-}
 
+}

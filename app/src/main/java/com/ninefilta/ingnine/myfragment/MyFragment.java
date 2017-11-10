@@ -1,4 +1,4 @@
-package com.ninefilta.ingnine;
+package com.ninefilta.ingnine.myfragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.ninefilta.ingnine.ProfileFragment;
+import com.ninefilta.ingnine.R;
+
 /**
  * Created by pajh8 on 2017-09-17.
  */
@@ -17,7 +20,9 @@ import android.widget.TextView;
 public class MyFragment extends Fragment {
 
     TextView mMywork;
+    TextView mMyroom;
     MyWorkFragment mMyworkFr;
+    ProfileFragment mProfileFr;
     FragmentManager fmanager;
 
     @Nullable
@@ -35,6 +40,21 @@ public class MyFragment extends Fragment {
                 fmanager = getFragmentManager();
                 FragmentTransaction ftrans = fmanager.beginTransaction();
                 ftrans.replace(R.id.container, mMyworkFr);
+                ftrans.addToBackStack(null);
+                ftrans.commit();
+
+            }
+        });
+
+        mMyroom = (TextView) rootView.findViewById(R.id.myRoom);
+        mMyroom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mProfileFr = new ProfileFragment();
+                fmanager = getFragmentManager();
+                FragmentTransaction ftrans = fmanager.beginTransaction();
+                ftrans.replace(R.id.container, mProfileFr);
                 ftrans.addToBackStack(null);
                 ftrans.commit();
 

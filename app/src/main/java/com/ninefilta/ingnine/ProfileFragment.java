@@ -8,19 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by pajh8 on 2017-09-27.
+ * Created by pajh8 on 2017-10-31.
  */
 
-public class SearchFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.search_fragment, container, false);
+        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.profile_fragment, container, false);
+
         return rootView;
-
-
     }
-
 }

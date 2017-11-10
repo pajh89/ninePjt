@@ -1,4 +1,4 @@
-package com.ninefilta.ingnine;
+package com.ninefilta.ingnine.portfoliofragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.ninefilta.ingnine.R;
 
 import java.util.ArrayList;
 
@@ -50,7 +52,7 @@ public class ChangeBoxFragment extends Fragment{
     private void loadData() {
         mBoxItem.clear();
         for (int i = 1; i <= 10; i++) {
-            mBoxItem.add(new ChageBoxItem("셀피", ""+i));
+            mBoxItem.add(new ChageBoxItem("셀카용 필터모음"+i, +i+"월"+i+"일"));
         }
         mAdapter.addAll(mBoxItem);
     }

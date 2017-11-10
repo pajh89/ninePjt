@@ -1,4 +1,4 @@
-package com.ninefilta.ingnine;
+package com.ninefilta.ingnine.feedfragment;
 
 /**
  *

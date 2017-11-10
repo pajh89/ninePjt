@@ -1,4 +1,4 @@
-package com.ninefilta.ingnine;
+package com.ninefilta.ingnine.myfragment;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +13,9 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.ninefilta.ingnine.DetailItemFragment;
+import com.ninefilta.ingnine.R;
 
 import java.util.ArrayList;
 

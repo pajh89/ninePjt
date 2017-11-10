@@ -7,17 +7,25 @@
     android:layout_height="match_parent">
 
     <com.mancj.materialsearchbar.MaterialSearchBar
-        app:mt_speechMode="true"
         app:mt_hint="Search"
         app:mt_maxSuggestionsCount="10"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:id="@+id/searchBar" />
 
-    <android.support.v7.widget.RecyclerView
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="40dp"
+        app:pstsIndicatorHeight="0dp"
+        app:pstsIndicatorColor="#ffffff"
+        app:pstsTabTextSize="11sp"/>
 
-    </android.support.v7.widget.RecyclerView>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>

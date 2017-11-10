@@ -16,7 +16,7 @@
         >
 
         <ImageView
-            android:id="@+id/bar_mkf"
+            android:id="@+id/fe_makefilta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/btn_makeft"
@@ -31,7 +31,7 @@
             tools:ignore="HardcodedText" />
 
         <ImageView
-            android:id="@+id/bar_cmr"
+            android:id="@+id/fe_camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/btn_camera"
